@@ -36,27 +36,22 @@ export default {
       required: true,
     },
   },
-  mounted(paginaActual) {
-    this.getPeliculas(paginaActual);
+  mounted() {
+    this.getPeliculas();
   },
   methods: {
-    async getPeliculas(paginaActual) {
+    async getPeliculas() {
       var url = "https://api.themoviedb.org/3/discover/movie";
 
       const params = {
         api_key: "0d875707b106a6c6b453a0167a423d41",
-        page: paginaActual,
+        page: 3,
       };
 
       await axios
         .get(url, { params })
         .then((response) => {
           this.peliculas = response.data.results;
-          this.$forceUpdate();
-          localStorage.setItem(
-            "paginas",
-            JSON.stringify(response.data.total_pages)
-          );
         })
         .catch((error) => {
           console.log("Error: " + error);

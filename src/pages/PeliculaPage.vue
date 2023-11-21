@@ -1,13 +1,6 @@
 <template>
   <div class="q-pa-lg flex flex-center">
-    <q-pagination
-      v-model="current"
-      color="black"
-      :max="10"
-      :max-pages="6"
-      :boundary-numbers="false"
-      @click="PaginarPeliculas(this.current)"
-    />
+    <button @click="AgregarFavoritos()">click</button>
   </div>
   <div class="q-pa-lg flex flex-center">
     <div class="Pelicula-page">
@@ -40,17 +33,15 @@
 // import PeliculaFilter from "src/components/pelicula/PeliculaFilter.vue";
 import { ref } from "vue";
 import ListarPerliculas from "src/components/pelicula/ListarPerliculas.vue";
+import axios from "axios";
 
 export default {
   name: "PeliculaPage",
   components: {
-    // PeliculaFilter,
     ListarPerliculas,
   },
   data() {
-    return {
-      totalPaginas: localStorage.getItem("paginas"),
-    };
+    return {};
   },
   setup() {
     return {
@@ -58,9 +49,26 @@ export default {
     };
   },
   methods: {
-    PaginarPeliculas(paginaActual) {
-      ListarPerliculas.methods.getPeliculas(paginaActual);
+    async AgregarFavoritos(pelicula) {
+      const options = {
+        method: "GET",
+        url: "https://api.themoviedb.org/3/authentication/guest_session/new",
+        headers: {
+          accept: "application/json",
+          Authorization: "Bearer 0d875707b106a6c6b453a0167a423d41",
+        },
+      };
+
+      axios
+        .request(options)
+        .then(function (response) {
+          console.log(response.data);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
     },
+    IniciarSesion() {},
   },
 };
 </script>
