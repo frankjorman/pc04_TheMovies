@@ -50,25 +50,43 @@ export default {
   },
   methods: {
     async AgregarFavoritos(pelicula) {
-      const options = {
-        method: "GET",
-        url: "https://api.themoviedb.org/3/authentication/guest_session/new",
-        headers: {
-          accept: "application/json",
-          Authorization: "Bearer 0d875707b106a6c6b453a0167a423d41",
-        },
+      var url = "https://api.themoviedb.org/3/authentication/guest_session/new";
+
+      const params = {
+        api_key: "0d875707b106a6c6b453a0167a423d41",
       };
 
-      axios
-        .request(options)
-        .then(function (response) {
+      await axios
+        .get(url, { params })
+        .then((response) => {
+          debugger;
           console.log(response.data);
+          this.IniciarSesion(response.data.guest_session_id);
         })
-        .catch(function (error) {
+        .catch((error) => {
+          debugger;
           console.error(error);
         });
     },
-    IniciarSesion() {},
+    async IniciarSesion(guest_session_id) {
+      var url = "https://api.themoviedb.org/3/account/20708625/favorite";
+      const params = {
+        api_key: "0d875707b106a6c6b453a0167a423d41",
+        session_id: guest_session_id,
+      };
+      var data = { media_type: "movie", media_id: 550, favorite: true };
+
+      await axios
+        .post(url, data, { params })
+        .then((response) => {
+          debugger;
+          console.log(response.data);
+        })
+        .catch((error) => {
+          debugger;
+          console.error(error);
+        });
+    },
   },
 };
 </script>
