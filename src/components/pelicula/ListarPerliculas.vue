@@ -45,12 +45,13 @@ export default {
 
       const params = {
         api_key: "0d875707b106a6c6b453a0167a423d41",
-        page: 3,
+        page: 19,
       };
 
       await axios
         .get(url, { params })
         .then((response) => {
+          debugger;
           this.peliculas = response.data.results;
         })
         .catch((error) => {

@@ -5,7 +5,7 @@
       <PeliculaFilter />
     </div> -->
       <div class="Pelicula-list">
-        <ListarPerliculas />
+        <ListarFavoritos />
       </div>
     </div>
   </div>
@@ -27,22 +27,15 @@
 </style>
 
 <script>
-// import PeliculaFilter from "src/components/pelicula/PeliculaFilter.vue";
-import { ref } from "vue";
-import ListarPerliculas from "src/components/pelicula/ListarPerliculas.vue";
+import ListarFavoritos from "src/components/pelicula/ListarFavoritos.vue";
 
 export default {
   name: "PeliculaPage",
   components: {
-    ListarPerliculas,
+    ListarFavoritos,
   },
   data() {
     return {};
-  },
-  setup() {
-    return {
-      current: ref(1),
-    };
   },
   methods: {},
 };

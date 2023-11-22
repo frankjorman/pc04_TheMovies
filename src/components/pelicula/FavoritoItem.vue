@@ -40,31 +40,6 @@ export default {
       required: true,
     },
   },
-  methods: {
-    AgregarFavorito(id) {
-      const options = {
-        method: "POST",
-        url: "https://api.themoviedb.org/3/account/20708625/favorite",
-        headers: {
-          accept: "application/json",
-          "content-type": "application/json",
-          Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwZDg3NTcwN2IxMDZhNmM2YjQ1M2EwMTY3YTQyM2Q0MSIsInN1YiI6IjY1NTU3NzYzYjU0MDAyMDExYjdkODI2YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jTonMo3BEEILTouKdK8k8NRBfRJeRhemrd0yo_NLlCY",
-        },
-        data: { media_type: "movie", media_id: id, favorite: true },
-      };
-
-      axios
-        .request(options)
-        .then(function (response) {
-          debugger;
-          console.log(response.data);
-        })
-        .catch(function (error) {
-          debugger;
-          console.error(error);
-        });
-    },
-  },
+  methods: {},
 };
 </script>
