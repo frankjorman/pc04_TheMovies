@@ -8,14 +8,7 @@
     <q-card-section>
       <!-- <q-card-title>{{ pelicula.overview }}</q-card-title> -->
       <div class="text-h6 font-weight-bold">{{ pelicula.original_title }}</div>
-      <div class="text-center">
-        <q-btn
-          color="primary"
-          icon="star"
-          label="Agregar Favoritos"
-          @click="AgregarFavorito(pelicula.id)"
-        />
-      </div>
+      <div class="text-center"></div>
     </q-card-section>
   </q-card>
 </template>

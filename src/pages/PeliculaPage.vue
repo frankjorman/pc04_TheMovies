@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-lg flex flex-center">
-    <q-btn color="primary" label="Ir a Favoritos" @click="IrFavoritos()" />
+    <q-btn color="secondary" label="Listar Favoritos" @click="IrFavoritos()" />
   </div>
   <div class="q-pa-lg flex flex-center">
     <div class="Pelicula-page">
