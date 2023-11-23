@@ -1,5 +1,8 @@
 <template>
   <div class="q-pa-lg flex flex-center">
+    <q-btn color="primary" label="Ir a Todos" @click="IrLista()" />
+  </div>
+  <div class="q-pa-lg flex flex-center">
     <div class="Pelicula-page">
       <!-- <div class="Pelicula-filter q-ml-md q-mr-xl">
       <PeliculaFilter />
@@ -37,6 +40,10 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    IrLista() {
+      location.href = "#/";
+    },
+  },
 };
 </script>

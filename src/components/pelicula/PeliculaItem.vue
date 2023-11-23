@@ -32,6 +32,8 @@
 
 <script>
 import axios from "axios";
+import { Notify } from "quasar";
+
 export default {
   name: "PeliculaItem",
   props: {
@@ -49,7 +51,7 @@ export default {
           accept: "application/json",
           "content-type": "application/json",
           Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwZDg3NTcwN2IxMDZhNmM2YjQ1M2EwMTY3YTQyM2Q0MSIsInN1YiI6IjY1NTU3NzYzYjU0MDAyMDExYjdkODI2YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jTonMo3BEEILTouKdK8k8NRBfRJeRhemrd0yo_NLlCY",
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmYWEzOTE5YmM2MGNhMTAxZWZiMmY2MzFjOTEzMWMwOCIsInN1YiI6IjY1NTU2NzJlYWM0MTYxMDExZWY4NmE2MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.O9LY2kU5z439a8-7BLECkJzvw0Xv7jVb5FwB5bpYmkc",
         },
         data: { media_type: "movie", media_id: id, favorite: true },
       };
@@ -57,7 +59,10 @@ export default {
       axios
         .request(options)
         .then(function (response) {
-          debugger;
+          Notify.create({
+            type: "positive",
+            message: "Agregado exitosamente",
+          });
           console.log(response.data);
         })
         .catch(function (error) {

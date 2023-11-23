@@ -1,5 +1,8 @@
 <template>
   <div class="q-pa-lg flex flex-center">
+    <q-btn color="primary" label="Ir a Favoritos" @click="IrFavoritos()" />
+  </div>
+  <div class="q-pa-lg flex flex-center">
     <div class="Pelicula-page">
       <!-- <div class="Pelicula-filter q-ml-md q-mr-xl">
       <PeliculaFilter />
@@ -44,6 +47,10 @@ export default {
       current: ref(1),
     };
   },
-  methods: {},
+  methods: {
+    IrFavoritos() {
+      location.href = "#/Favoritos";
+    },
+  },
 };
 </script>

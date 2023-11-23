@@ -44,7 +44,7 @@ export default {
       var url = "https://api.themoviedb.org/3/discover/movie";
 
       const params = {
-        api_key: "0d875707b106a6c6b453a0167a423d41",
+        api_key: "faa3919bc60ca101efb2f631c9131c08",
         page: 19,
       };
 
