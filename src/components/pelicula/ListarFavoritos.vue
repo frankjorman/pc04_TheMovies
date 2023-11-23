@@ -1,5 +1,5 @@
 <template>
-  <h6>Lista de Favoritos</h6>
+  <h6>Lista de mis Peliculas Favoritas</h6>
   <div class="pelicula-list">
     <div class="pelicula-grid">
       <div
@@ -53,7 +53,7 @@ export default {
         headers: {
           accept: "application/json",
           Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNzgzZWQyNDM2NWFkN2RjMjJkN2Y2Zjk0Zjk5ODQzZCIsInN1YiI6IjY1NWFiMjNhMDgxNmM3MDBjM2RkY2NiNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.sEaYVaTIv2vB6b7bw4asVh0NKvlMJ8qp7TPq2PgK9JI",
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwODMyNDRiNTU0NTE5NGZjMjJiNWVhZTdkNzU0YTJhNyIsInN1YiI6IjY1NWQ0ODMwZDM5OWU2MDBlYzQzNWFhNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jZzPYq1z0_dvCsYpnR4rB-CIGPWqWEMhvesW6hxp7DI",
         },
       };
       var listaFavoritos = [];

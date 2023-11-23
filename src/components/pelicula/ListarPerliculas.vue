@@ -1,5 +1,5 @@
 <template>
-  <h6>Lista de Peliculas</h6>
+  <h6>Lista de Todas las Peliculas</h6>
   <div class="pelicula-list">
     <div class="pelicula-grid">
       <div
@@ -44,8 +44,8 @@ export default {
       var url = "https://api.themoviedb.org/3/discover/movie";
 
       const params = {
-        api_key: "3783ed24365ad7dc22d7f6f94f99843d",
-        page: 15,
+        api_key: "083244b5545194fc22b5eae7d754a2a7",
+        page: 28,
       };
 
       await axios

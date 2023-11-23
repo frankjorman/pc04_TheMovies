@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-lg flex flex-center">
-    <q-btn color="secondary" label="Listar Todos" @click="IrLista()" />
+    <q-btn color="brown-5" label="Listar Todos" @click="IrLista()" />
   </div>
   <div class="q-pa-lg flex flex-center">
     <div class="Pelicula-page">
