@@ -1,6 +1,11 @@
 <template>
   <div class="q-pa-lg flex flex-center">
-    <q-btn color="brown-5" label="Listar Todos" @click="IrLista()" />
+    <q-btn
+      color="black"
+      label="Listar Todos"
+      icon="navigate_next"
+      @click="IrLista()"
+    />
   </div>
   <div class="q-pa-lg flex flex-center">
     <div class="Pelicula-page">
